@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import os
 
 
-os.makedirs("grafikleri", exist_ok=True)
+os.makedirs("grafikler", exist_ok=True)
 
 
 tsla = yf.download("TSLA", period="1y")
@@ -33,7 +33,7 @@ plt.xlabel("Tarih")
 plt.ylabel("Fiyat ($)")
 plt.legend()
 plt.grid(True)
-plt.savefig("grafikleri/fiyat.png")
+plt.savefig("grafikler/fiyat.png")
 plt.close()
 
 plt.figure(figsize=(12,6))
@@ -41,7 +41,7 @@ tsla["Daily Return"].plot()
 plt.title("TSLA Günlük Getiri")
 plt.ylabel("Getiri (%)")
 plt.grid(True)
-plt.savefig("grafikleri/getiri.png")
+plt.savefig("grafikler/getiri.png")
 plt.close()
 
 
@@ -54,7 +54,7 @@ plt.xlabel("Tarih")
 plt.ylabel("Fiyat ($)")
 plt.legend()
 plt.grid(True)
-plt.savefig("grafikleri/sma.png")
+plt.savefig("grafikler/sma.png")
 plt.close()
 
 
@@ -65,7 +65,7 @@ plt.axhline(30, color='green', linestyle='--')
 plt.title("TSLA RSI (14 Günlük)")
 plt.ylabel("RSI")
 plt.grid(True)
-plt.savefig("grafikleri/rsi.png")
+plt.savefig("grafikler/rsi.png")
 plt.close()
 
 
